@@ -1,0 +1,10 @@
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\bin\Debug\Brain_Ring.exe.config
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\bin\Debug\Brain_Ring.exe
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\bin\Debug\Brain_Ring.pdb
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\obj\Debug\Brain_Ring.csproj.AssemblyReference.cache
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\obj\Debug\Brain_Ring.Main_Form.resources
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\obj\Debug\Brain_Ring.Properties.Resources.resources
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\obj\Debug\Brain_Ring.csproj.GenerateResource.cache
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\obj\Debug\Brain_Ring.csproj.CoreCompileInputs.cache
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\obj\Debug\Brain_Ring.exe
+C:\Users\пользователь\Desktop\Toha\Brain_Ring\obj\Debug\Brain_Ring.pdb
