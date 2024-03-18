@@ -8,6 +8,7 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace Brain_Ring
 {
@@ -21,6 +22,8 @@ namespace Brain_Ring
         int team1Points;
         int team2Points;
         int second;
+        bool beforeStart = true;
+        bool afterStart = true;
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
@@ -51,24 +54,55 @@ namespace Brain_Ring
             if (data == 1)
             {
                 MainLabel.BackColor = Color.Tomato;
+                beforeStart = true;
+                timer1.Stop();
             }
             else if(data == 2)
             {
-                MainLabel.BackColor= Color.M;
+                MainLabel.BackColor= Color.RoyalBlue;
+                beforeStart = true;
+                timer1.Stop();
             }
         }
 
         private void serialPort1_DataReceived_1(object sender, SerialDataReceivedEventArgs e)
         {
-            string data = serialPort1.ReadLine();
-            data.Trim();
-            long k = Int64.Parse(data);
-            if (this.InvokeRequired)
+                string data = serialPort1.ReadLine();
+                data.Trim();
+                long k = Int64.Parse(data);
+            if (beforeStart == false)
             {
-                Invoke(new MethodInvoker(delegate ()
+                if (this.InvokeRequired)
                 {
-                    yazdyr(k);
-                }));
+                    Invoke(new MethodInvoker(delegate ()
+                    {
+                        yazdyr(k);
+                    }));
+                }
+            }
+            else 
+            {
+                if (afterStart == true)
+                {
+                    WindowsMediaPlayer myplayer = new WindowsMediaPlayer();
+                    string mp3FileName = "music.wav";
+                    myplayer.URL = AppDomain.CurrentDomain.BaseDirectory + mp3FileName;
+                    myplayer.controls.play();
+                    if (k == 1)
+                    {
+                        MainLabel.BackColor = Color.Tomato;
+                        afterStart = false;
+                    }
+                    else if (k == 2)
+                    {
+                        MainLabel.BackColor = Color.RoyalBlue;
+                        afterStart = false;
+                    }
+                }
+                else
+                {
+                    return;
+                }
             }
         }
 
@@ -100,18 +134,18 @@ namespace Brain_Ring
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(button1.Text == "Start")
+            beforeStart = true;
+            afterStart = true;
+
+            if (button1.Text == "Start")
             {
                 timer1.Start();
-                button1.Text = "Stop";
-            }
-            else if(button1.Text == "Stop")
-            {
-                timer1.Stop();
+                beforeStart = false;
                 button1.Text = "Reset";
             }
-            else
+            else if(button1.Text == "Reset")
             {
+                timer1.Stop();
                 MainLabel.Text = "0";
                 second = 0;
                 button1.Text = "Start";
@@ -122,7 +156,6 @@ namespace Brain_Ring
         {
             second++;
             MainLabel.Text = second.ToString();
-            if
         }
     }
 }

@@ -18,3 +18,8 @@ C:\Users\пользователь\Documents\For_Toha\obj\Debug\Brain_Ring.csproj
 C:\Users\пользователь\Documents\For_Toha\obj\Debug\Brain_Ring.csproj.CoreCompileInputs.cache
 C:\Users\пользователь\Documents\For_Toha\obj\Debug\Brain_Ring.exe
 C:\Users\пользователь\Documents\For_Toha\obj\Debug\Brain_Ring.pdb
+C:\Users\пользователь\Documents\For_Toha\bin\Debug\Interop.WMPLib.dll
+C:\Users\пользователь\Documents\For_Toha\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\пользователь\Documents\For_Toha\obj\Debug\Interop.WMPLib.dll
+C:\Users\пользователь\Documents\For_Toha\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\пользователь\Documents\For_Toha\obj\Debug\Brain_Ring.csproj.ResolveComReference.cache
