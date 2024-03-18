@@ -32,37 +32,41 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Team_1Label = new System.Windows.Forms.Label();
-            this.team1_Points = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.team_1UP = new System.Windows.Forms.PictureBox();
             this.team_1DOWN = new System.Windows.Forms.PictureBox();
+            this.team1_Points = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Team2_Points = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.team_2UP = new System.Windows.Forms.PictureBox();
-            this.Team_2Label = new System.Windows.Forms.Label();
             this.team_2DOWN = new System.Windows.Forms.PictureBox();
+            this.team2_Points = new System.Windows.Forms.Label();
             this.MainLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.team_1UP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.team_1DOWN)).BeginInit();
             this.panel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.team_2UP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.team_2DOWN)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -81,29 +85,40 @@
             this.panel3.Size = new System.Drawing.Size(645, 362);
             this.panel3.TabIndex = 0;
             // 
-            // Team_1Label
+            // tableLayoutPanel3
             // 
-            this.Team_1Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Team_1Label.Font = new System.Drawing.Font("Times New Roman", 42F, System.Drawing.FontStyle.Bold);
-            this.Team_1Label.Location = new System.Drawing.Point(0, 0);
-            this.Team_1Label.Margin = new System.Windows.Forms.Padding(0);
-            this.Team_1Label.Name = "Team_1Label";
-            this.Team_1Label.Size = new System.Drawing.Size(322, 362);
-            this.Team_1Label.TabIndex = 0;
-            this.Team_1Label.Text = "Team 1";
-            this.Team_1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(645, 362);
+            this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // team1_Points
+            // tableLayoutPanel4
             // 
-            this.team1_Points.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.team1_Points.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Bold);
-            this.team1_Points.Location = new System.Drawing.Point(0, 120);
-            this.team1_Points.Margin = new System.Windows.Forms.Padding(0);
-            this.team1_Points.Name = "team1_Points";
-            this.team1_Points.Size = new System.Drawing.Size(323, 120);
-            this.team1_Points.TabIndex = 0;
-            this.team1_Points.Text = "10";
-            this.team1_Points.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.team_1UP, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.team_1DOWN, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.team1_Points, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(430, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(215, 362);
+            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // team_1UP
             // 
@@ -112,10 +127,11 @@
             this.team_1UP.Location = new System.Drawing.Point(0, 0);
             this.team_1UP.Margin = new System.Windows.Forms.Padding(0);
             this.team_1UP.Name = "team_1UP";
-            this.team_1UP.Size = new System.Drawing.Size(323, 120);
+            this.team_1UP.Size = new System.Drawing.Size(215, 120);
             this.team_1UP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.team_1UP.TabIndex = 1;
             this.team_1UP.TabStop = false;
+            this.team_1UP.Click += new System.EventHandler(this.team_1UP_Click);
             // 
             // team_1DOWN
             // 
@@ -124,10 +140,23 @@
             this.team_1DOWN.Location = new System.Drawing.Point(0, 240);
             this.team_1DOWN.Margin = new System.Windows.Forms.Padding(0);
             this.team_1DOWN.Name = "team_1DOWN";
-            this.team_1DOWN.Size = new System.Drawing.Size(323, 122);
+            this.team_1DOWN.Size = new System.Drawing.Size(215, 122);
             this.team_1DOWN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.team_1DOWN.TabIndex = 1;
             this.team_1DOWN.TabStop = false;
+            this.team_1DOWN.Click += new System.EventHandler(this.team_1DOWN_Click);
+            // 
+            // team1_Points
+            // 
+            this.team1_Points.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team1_Points.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Bold);
+            this.team1_Points.Location = new System.Drawing.Point(0, 120);
+            this.team1_Points.Margin = new System.Windows.Forms.Padding(0);
+            this.team1_Points.Name = "team1_Points";
+            this.team1_Points.Size = new System.Drawing.Size(215, 120);
+            this.team1_Points.TabIndex = 0;
+            this.team1_Points.Text = "0";
+            this.team1_Points.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -140,18 +169,39 @@
             this.panel4.Size = new System.Drawing.Size(645, 362);
             this.panel4.TabIndex = 1;
             // 
-            // Team2_Points
+            // tableLayoutPanel5
             // 
-            this.Team2_Points.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Team2_Points.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Team2_Points.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Bold);
-            this.Team2_Points.Location = new System.Drawing.Point(0, 118);
-            this.Team2_Points.Margin = new System.Windows.Forms.Padding(0);
-            this.Team2_Points.Name = "Team2_Points";
-            this.Team2_Points.Size = new System.Drawing.Size(317, 118);
-            this.Team2_Points.TabIndex = 2;
-            this.Team2_Points.Text = "10";
-            this.Team2_Points.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.textBox2, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(645, 362);
+            this.tableLayoutPanel5.TabIndex = 4;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.team_2UP, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.team_2DOWN, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.team2_Points, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(433, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 3;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(209, 356);
+            this.tableLayoutPanel6.TabIndex = 4;
             // 
             // team_2UP
             // 
@@ -160,22 +210,11 @@
             this.team_2UP.Location = new System.Drawing.Point(0, 0);
             this.team_2UP.Margin = new System.Windows.Forms.Padding(0);
             this.team_2UP.Name = "team_2UP";
-            this.team_2UP.Size = new System.Drawing.Size(317, 118);
+            this.team_2UP.Size = new System.Drawing.Size(209, 118);
             this.team_2UP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.team_2UP.TabIndex = 1;
             this.team_2UP.TabStop = false;
-            // 
-            // Team_2Label
-            // 
-            this.Team_2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Team_2Label.Font = new System.Drawing.Font("Times New Roman", 42F, System.Drawing.FontStyle.Bold);
-            this.Team_2Label.Location = new System.Drawing.Point(0, 0);
-            this.Team_2Label.Margin = new System.Windows.Forms.Padding(0);
-            this.Team_2Label.Name = "Team_2Label";
-            this.Team_2Label.Size = new System.Drawing.Size(322, 362);
-            this.Team_2Label.TabIndex = 3;
-            this.Team_2Label.Text = "Team 2";
-            this.Team_2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.team_2UP.Click += new System.EventHandler(this.team_2UP_Click);
             // 
             // team_2DOWN
             // 
@@ -184,40 +223,42 @@
             this.team_2DOWN.Location = new System.Drawing.Point(0, 236);
             this.team_2DOWN.Margin = new System.Windows.Forms.Padding(0);
             this.team_2DOWN.Name = "team_2DOWN";
-            this.team_2DOWN.Size = new System.Drawing.Size(317, 120);
+            this.team_2DOWN.Size = new System.Drawing.Size(209, 120);
             this.team_2DOWN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.team_2DOWN.TabIndex = 1;
             this.team_2DOWN.TabStop = false;
+            this.team_2DOWN.Click += new System.EventHandler(this.team_2DOWN_Click);
+            // 
+            // team2_Points
+            // 
+            this.team2_Points.Cursor = System.Windows.Forms.Cursors.Default;
+            this.team2_Points.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team2_Points.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Bold);
+            this.team2_Points.Location = new System.Drawing.Point(0, 118);
+            this.team2_Points.Margin = new System.Windows.Forms.Padding(0);
+            this.team2_Points.Name = "team2_Points";
+            this.team2_Points.Size = new System.Drawing.Size(209, 118);
+            this.team2_Points.TabIndex = 2;
+            this.team2_Points.Text = "0";
+            this.team2_Points.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainLabel
             // 
             this.MainLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainLabel.Font = new System.Drawing.Font("Times New Roman", 42F, System.Drawing.FontStyle.Bold);
+            this.MainLabel.Font = new System.Drawing.Font("Times New Roman", 99.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainLabel.Location = new System.Drawing.Point(0, 0);
             this.MainLabel.Margin = new System.Windows.Forms.Padding(0);
             this.MainLabel.Name = "MainLabel";
             this.MainLabel.Size = new System.Drawing.Size(1290, 362);
             this.MainLabel.TabIndex = 0;
-            this.MainLabel.Text = "Main text goes here!";
+            this.MainLabel.Text = "0";
             this.MainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(0, 317);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1290, 45);
-            this.label1.TabIndex = 1;
-            this.label1.Text = " Data from Arduino";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGreen;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.MainLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -261,75 +302,78 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1290, 724);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // tableLayoutPanel3
+            // textBox1
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.Team_1Label, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(645, 362);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.textBox1.BackColor = System.Drawing.Color.Tomato;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.CausesValidation = false;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(430, 362);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "\r\n\r\nTeam1";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.WordWrap = false;
             // 
-            // tableLayoutPanel4
+            // textBox2
             // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.team_1UP, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.team_1DOWN, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.team1_Points, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(322, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(323, 362);
-            this.tableLayoutPanel4.TabIndex = 1;
+            this.textBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(430, 362);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "\r\n\r\nTeam2";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tableLayoutPanel5
+            // button1
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.Team_2Label, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(645, 362);
-            this.tableLayoutPanel5.TabIndex = 4;
+            this.button1.BackColor = System.Drawing.Color.LightGreen;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(1290, 72);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Start";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tableLayoutPanel6
+            // label1
             // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.team_2UP, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.team_2DOWN, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.Team2_Points, 0, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(325, 3);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 3;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(317, 356);
-            this.tableLayoutPanel6.TabIndex = 4;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(0, 327);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1290, 35);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "data";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 255);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1290, 72);
+            this.panel2.TabIndex = 3;
             // 
             // Main_Form
             // 
@@ -345,19 +389,22 @@
             this.Text = "Brain Ring";
             this.Load += new System.EventHandler(this.Main_Form_Load);
             this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.team_1UP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.team_1DOWN)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.team_2UP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.team_2DOWN)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -367,14 +414,11 @@
         private System.Windows.Forms.PictureBox team_1DOWN;
         private System.Windows.Forms.PictureBox team_1UP;
         private System.Windows.Forms.Label team1_Points;
-        private System.Windows.Forms.Label Team_1Label;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox team_2DOWN;
-        private System.Windows.Forms.Label Team_2Label;
         private System.Windows.Forms.PictureBox team_2UP;
-        private System.Windows.Forms.Label Team2_Points;
+        private System.Windows.Forms.Label team2_Points;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label MainLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -383,6 +427,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         public System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

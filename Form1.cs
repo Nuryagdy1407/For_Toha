@@ -18,8 +18,13 @@ namespace Brain_Ring
             InitializeComponent();
         }
 
+        int team1Points;
+        int team2Points;
+        int second;
+
         private void Main_Form_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = button1;
             serialPort1.Close();
             // Get a list of serial port names.
             string[] ports = SerialPort.GetPortNames();
@@ -43,6 +48,14 @@ namespace Brain_Ring
         private void yazdyr(long data)
         {
             label1.Text = data.ToString();
+            if (data == 1)
+            {
+                MainLabel.BackColor = Color.Tomato;
+            }
+            else if(data == 2)
+            {
+                MainLabel.BackColor= Color.M;
+            }
         }
 
         private void serialPort1_DataReceived_1(object sender, SerialDataReceivedEventArgs e)
@@ -57,6 +70,59 @@ namespace Brain_Ring
                     yazdyr(k);
                 }));
             }
+        }
+
+        private void team_1UP_Click(object sender, EventArgs e)
+        {
+            team1Points++;
+            team1_Points.Text = team1Points.ToString();
+        }
+
+        private void team_1DOWN_Click(object sender, EventArgs e)
+        {
+            team1Points--;
+            team1_Points.Text = team1Points.ToString();
+        }
+
+        private void team_2UP_Click(object sender, EventArgs e)
+        {
+            team2Points++;
+            team2_Points.Text = team2Points.ToString();
+
+        }
+
+        private void team_2DOWN_Click(object sender, EventArgs e)
+        {
+            team2Points--;
+            team2_Points.Text = team2Points.ToString();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(button1.Text == "Start")
+            {
+                timer1.Start();
+                button1.Text = "Stop";
+            }
+            else if(button1.Text == "Stop")
+            {
+                timer1.Stop();
+                button1.Text = "Reset";
+            }
+            else
+            {
+                MainLabel.Text = "0";
+                second = 0;
+                button1.Text = "Start";
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            second++;
+            MainLabel.Text = second.ToString();
+            if
         }
     }
 }
