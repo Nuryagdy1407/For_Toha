@@ -34,11 +34,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.team_1UP = new System.Windows.Forms.PictureBox();
+            this.team_1DOWN = new System.Windows.Forms.PictureBox();
             this.team1_Points = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.team_2UP = new System.Windows.Forms.PictureBox();
+            this.team_2DOWN = new System.Windows.Forms.PictureBox();
             this.team2_Points = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.MainLabel = new System.Windows.Forms.Label();
@@ -48,30 +52,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.team_2UP = new System.Windows.Forms.PictureBox();
-            this.team_2DOWN = new System.Windows.Forms.PictureBox();
-            this.team_1UP = new System.Windows.Forms.PictureBox();
-            this.team_1DOWN = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.team_1UP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team_1DOWN)).BeginInit();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.team_2UP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team_2DOWN)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.team_2UP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.team_2DOWN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.team_1UP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.team_1DOWN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +126,32 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(215, 327);
             this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // team_1UP
+            // 
+            this.team_1UP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team_1UP.Image = global::Brain_Ring.Properties.Resources.new_Up;
+            this.team_1UP.Location = new System.Drawing.Point(0, 0);
+            this.team_1UP.Margin = new System.Windows.Forms.Padding(0);
+            this.team_1UP.Name = "team_1UP";
+            this.team_1UP.Size = new System.Drawing.Size(215, 109);
+            this.team_1UP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.team_1UP.TabIndex = 1;
+            this.team_1UP.TabStop = false;
+            this.team_1UP.Click += new System.EventHandler(this.team_1UP_Click);
+            // 
+            // team_1DOWN
+            // 
+            this.team_1DOWN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team_1DOWN.Image = global::Brain_Ring.Properties.Resources.new_Down;
+            this.team_1DOWN.Location = new System.Drawing.Point(0, 218);
+            this.team_1DOWN.Margin = new System.Windows.Forms.Padding(0);
+            this.team_1DOWN.Name = "team_1DOWN";
+            this.team_1DOWN.Size = new System.Drawing.Size(215, 109);
+            this.team_1DOWN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.team_1DOWN.TabIndex = 1;
+            this.team_1DOWN.TabStop = false;
+            this.team_1DOWN.Click += new System.EventHandler(this.team_1DOWN_Click);
             // 
             // team1_Points
             // 
@@ -202,6 +228,34 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(209, 321);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
+            // team_2UP
+            // 
+            this.team_2UP.BackColor = System.Drawing.Color.RoyalBlue;
+            this.team_2UP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team_2UP.Image = global::Brain_Ring.Properties.Resources.new_Up;
+            this.team_2UP.Location = new System.Drawing.Point(0, 0);
+            this.team_2UP.Margin = new System.Windows.Forms.Padding(0);
+            this.team_2UP.Name = "team_2UP";
+            this.team_2UP.Size = new System.Drawing.Size(209, 107);
+            this.team_2UP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.team_2UP.TabIndex = 1;
+            this.team_2UP.TabStop = false;
+            this.team_2UP.Click += new System.EventHandler(this.team_2UP_Click);
+            // 
+            // team_2DOWN
+            // 
+            this.team_2DOWN.BackColor = System.Drawing.Color.RoyalBlue;
+            this.team_2DOWN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team_2DOWN.Image = global::Brain_Ring.Properties.Resources.new_Down;
+            this.team_2DOWN.Location = new System.Drawing.Point(0, 214);
+            this.team_2DOWN.Margin = new System.Windows.Forms.Padding(0);
+            this.team_2DOWN.Name = "team_2DOWN";
+            this.team_2DOWN.Size = new System.Drawing.Size(209, 107);
+            this.team_2DOWN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.team_2DOWN.TabIndex = 1;
+            this.team_2DOWN.TabStop = false;
+            this.team_2DOWN.Click += new System.EventHandler(this.team_2DOWN_Click);
+            // 
             // team2_Points
             // 
             this.team2_Points.BackColor = System.Drawing.Color.RoyalBlue;
@@ -242,7 +296,7 @@
             this.MainLabel.Name = "MainLabel";
             this.MainLabel.Size = new System.Drawing.Size(1290, 325);
             this.MainLabel.TabIndex = 0;
-            this.MainLabel.Text = "0";
+            this.MainLabel.Text = "60";
             this.MainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -331,11 +385,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1290, 724);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 3;
@@ -353,71 +402,6 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1284, 66);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(259, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(764, 66);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Brain Ring";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // team_2UP
-            // 
-            this.team_2UP.BackColor = System.Drawing.Color.RoyalBlue;
-            this.team_2UP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.team_2UP.Image = global::Brain_Ring.Properties.Resources.new_Up;
-            this.team_2UP.Location = new System.Drawing.Point(0, 0);
-            this.team_2UP.Margin = new System.Windows.Forms.Padding(0);
-            this.team_2UP.Name = "team_2UP";
-            this.team_2UP.Size = new System.Drawing.Size(209, 107);
-            this.team_2UP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.team_2UP.TabIndex = 1;
-            this.team_2UP.TabStop = false;
-            this.team_2UP.Click += new System.EventHandler(this.team_2UP_Click);
-            // 
-            // team_2DOWN
-            // 
-            this.team_2DOWN.BackColor = System.Drawing.Color.RoyalBlue;
-            this.team_2DOWN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.team_2DOWN.Image = global::Brain_Ring.Properties.Resources.new_Down;
-            this.team_2DOWN.Location = new System.Drawing.Point(0, 214);
-            this.team_2DOWN.Margin = new System.Windows.Forms.Padding(0);
-            this.team_2DOWN.Name = "team_2DOWN";
-            this.team_2DOWN.Size = new System.Drawing.Size(209, 107);
-            this.team_2DOWN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.team_2DOWN.TabIndex = 1;
-            this.team_2DOWN.TabStop = false;
-            this.team_2DOWN.Click += new System.EventHandler(this.team_2DOWN_Click);
-            // 
-            // team_1UP
-            // 
-            this.team_1UP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.team_1UP.Image = global::Brain_Ring.Properties.Resources.new_Up;
-            this.team_1UP.Location = new System.Drawing.Point(0, 0);
-            this.team_1UP.Margin = new System.Windows.Forms.Padding(0);
-            this.team_1UP.Name = "team_1UP";
-            this.team_1UP.Size = new System.Drawing.Size(215, 109);
-            this.team_1UP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.team_1UP.TabIndex = 1;
-            this.team_1UP.TabStop = false;
-            this.team_1UP.Click += new System.EventHandler(this.team_1UP_Click);
-            // 
-            // team_1DOWN
-            // 
-            this.team_1DOWN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.team_1DOWN.Image = global::Brain_Ring.Properties.Resources.new_Down;
-            this.team_1DOWN.Location = new System.Drawing.Point(0, 218);
-            this.team_1DOWN.Margin = new System.Windows.Forms.Padding(0);
-            this.team_1DOWN.Name = "team_1DOWN";
-            this.team_1DOWN.Size = new System.Drawing.Size(215, 109);
-            this.team_1DOWN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.team_1DOWN.TabIndex = 1;
-            this.team_1DOWN.TabStop = false;
-            this.team_1DOWN.Click += new System.EventHandler(this.team_1DOWN_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -429,6 +413,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(259, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(764, 66);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Brain Ring";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -439,6 +434,11 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Main_Form
             // 
@@ -457,20 +457,20 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.team_1UP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team_1DOWN)).EndInit();
             this.panel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.team_2UP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team_2DOWN)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.team_2UP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.team_2DOWN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.team_1UP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.team_1DOWN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

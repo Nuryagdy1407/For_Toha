@@ -23,7 +23,7 @@ namespace Brain_Ring
         int team2Points;
         int second;
         bool beforeStart = true;
-        bool afterStart = true;
+        bool afterstart = true;
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
@@ -40,6 +40,7 @@ namespace Brain_Ring
             try
             {
                 serialPort1.Open();
+
             }
             catch (Exception)
             {
@@ -51,58 +52,48 @@ namespace Brain_Ring
         private void yazdyr(long data)
         {
             label1.Text = data.ToString();
-            if (data == 1)
+            if (beforeStart == false)
             {
-                MainLabel.BackColor = Color.Tomato;
                 beforeStart = true;
                 timer1.Stop();
+                if (data == 1)
+                {
+                    MainLabel.BackColor = Color.Tomato;
+                }
+                else if (data == 2)
+                {
+                    MainLabel.BackColor = Color.RoyalBlue;
+                }
             }
-            else if(data == 2)
+            else if (beforeStart == true && afterstart == true)
             {
-                MainLabel.BackColor= Color.RoyalBlue;
-                beforeStart = true;
-                timer1.Stop();
+                string mp3FileName = "music.wav";
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(AppDomain.CurrentDomain.BaseDirectory + mp3FileName);
+                player.Play();
+                button1.Text = "Reset";
+                afterstart = false;
+                if (data == 1)
+                {
+                    MainLabel.BackColor = Color.Tomato;
+                }
+                else if (data == 2)
+                {
+                    MainLabel.BackColor = Color.RoyalBlue;
+                }
             }
         }
 
         private void serialPort1_DataReceived_1(object sender, SerialDataReceivedEventArgs e)
         {
-                string data = serialPort1.ReadLine();
-                data.Trim();
-                long k = Int64.Parse(data);
-            if (beforeStart == false)
+            string data = serialPort1.ReadLine();
+            data.Trim();
+            long k = Int64.Parse(data);
+            if (this.InvokeRequired)
             {
-                if (this.InvokeRequired)
+                Invoke(new MethodInvoker(delegate ()
                 {
-                    Invoke(new MethodInvoker(delegate ()
-                    {
-                        yazdyr(k);
-                    }));
-                }
-            }
-            else 
-            {
-                if (afterStart == true)
-                {
-                    WindowsMediaPlayer myplayer = new WindowsMediaPlayer();
-                    string mp3FileName = "music.wav";
-                    myplayer.URL = AppDomain.CurrentDomain.BaseDirectory + mp3FileName;
-                    myplayer.controls.play();
-                    if (k == 1)
-                    {
-                        MainLabel.BackColor = Color.Tomato;
-                        afterStart = false;
-                    }
-                    else if (k == 2)
-                    {
-                        MainLabel.BackColor = Color.RoyalBlue;
-                        afterStart = false;
-                    }
-                }
-                else
-                {
-                    return;
-                }
+                    yazdyr(k);
+                }));
             }
         }
 
@@ -134,9 +125,6 @@ namespace Brain_Ring
 
         private void button1_Click(object sender, EventArgs e)
         {
-            beforeStart = true;
-            afterStart = true;
-
             if (button1.Text == "Start")
             {
                 timer1.Start();
@@ -146,7 +134,10 @@ namespace Brain_Ring
             else if(button1.Text == "Reset")
             {
                 timer1.Stop();
-                MainLabel.Text = "0";
+                beforeStart=true;
+                afterstart = true;
+                MainLabel.Text = "60";
+                MainLabel.BackColor = Color.White;
                 second = 0;
                 button1.Text = "Start";
             }
@@ -155,7 +146,12 @@ namespace Brain_Ring
         private void timer1_Tick(object sender, EventArgs e)
         {
             second++;
-            MainLabel.Text = second.ToString();
+            MainLabel.Text = (60-second).ToString();
+            
+            string mp3FileName = "tick.wav";
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(AppDomain.CurrentDomain.BaseDirectory + mp3FileName);
+            player.Play();
+
         }
     }
 }
