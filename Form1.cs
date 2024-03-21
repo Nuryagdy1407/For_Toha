@@ -147,11 +147,6 @@ namespace Brain_Ring
         {
             second++;
             MainLabel.Text = (60-second).ToString();
-            
-            string mp3FileName = "tick.wav";
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(AppDomain.CurrentDomain.BaseDirectory + mp3FileName);
-            player.Play();
-
         }
     }
 }
