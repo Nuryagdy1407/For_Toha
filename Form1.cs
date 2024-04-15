@@ -40,7 +40,6 @@ namespace Brain_Ring
             try
             {
                 serialPort1.Open();
-
             }
             catch (Exception)
             {
@@ -70,7 +69,7 @@ namespace Brain_Ring
                 string mp3FileName = "music.wav";
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(AppDomain.CurrentDomain.BaseDirectory + mp3FileName);
                 player.Play();
-                button1.Text = "Reset";
+                button1.Text = "Continue";
                 afterstart = false;
                 if (data == 1)
                 {
@@ -129,12 +128,17 @@ namespace Brain_Ring
             {
                 timer1.Start();
                 beforeStart = false;
+                button1.Text = "Continue";
+            }
+            else if (button1.Text == "Continue")
+            {
+                timer1.Start();
                 button1.Text = "Reset";
             }
-            else if(button1.Text == "Reset")
+            else if (button1.Text == "Reset")
             {
                 timer1.Stop();
-                beforeStart=true;
+                beforeStart = true;
                 afterstart = true;
                 MainLabel.Text = "60";
                 MainLabel.BackColor = Color.White;
